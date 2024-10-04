@@ -37,7 +37,7 @@ public:
     TooFarAway,
   };
 
-  ListHandler();
+  ListHandler(const std::string& path);
 
   void add(const entry_t& entry);
   void saveToFile(const std::string& path) const;

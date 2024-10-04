@@ -2,14 +2,14 @@
 
 #include <iostream>
 
-int main()
+int main(int argc, const char* argv[])
 {
   try
   {
     std::locale::global(std::locale("ru_RU.UTF-8"));
     std::wcout.imbue(std::locale("ru_RU.UTF-8"));
 
-    ListHandler handler{};
+    ListHandler handler{argv[1]};
     std::string line;
     while (std::getline(std::cin, line))
     {

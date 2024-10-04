@@ -10,8 +10,8 @@
 
 constexpr std::size_t MINIMUM_ENTRIES = 2;
 
-ListHandler::ListHandler() :
-  entries_("test.db"),
+ListHandler::ListHandler(const std::string& path) :
+  entries_(path),
   entryList_(std::make_shared<std::vector<entry_t>>(entries_.fetchAll()))
 {
 
